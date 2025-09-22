@@ -69,7 +69,7 @@ fun Oszlop(modifier: Modifier = Modifier) {
     ) {
         Column {
             Slider(
-
+                modifier = Modifier.padding(bottom = 16.dp),
                 value = red.toFloat(),
                 enabled = true,
                 onValueChange = { red = it.toInt() },
@@ -80,7 +80,7 @@ fun Oszlop(modifier: Modifier = Modifier) {
         }
         Column {
             Slider(
-
+                modifier = Modifier.padding(bottom = 16.dp),
                 value = green.toFloat(),
                 enabled = true,
                 onValueChange = { green = it.toInt() },
@@ -92,6 +92,7 @@ fun Oszlop(modifier: Modifier = Modifier) {
         Column {
             Slider(
 
+                modifier = Modifier.padding(bottom = 16.dp),
                 value = blue.toFloat(),
                 enabled = true,
                 onValueChange = { blue = it.toInt() },
@@ -108,7 +109,7 @@ fun Oszlop(modifier: Modifier = Modifier) {
                 else -> Color.Black
             },
             fontSize = 25.sp,
-            text = "($red, $green, $blue)"
+            text = ("Red: $red\n\n Green: $green\n\n Blue: $blue")
         )
         Spacer(Modifier.height(height = 16.dp))
         Button(
